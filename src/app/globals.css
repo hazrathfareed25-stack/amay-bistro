@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f7f4;
+  color: #2d2520;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.025rem;
+}
+
+/* Buttons */
+.btn {
+  @apply px-8 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white hover:bg-primary-600 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-accent-200 text-dark hover:bg-accent-300 shadow-md hover:shadow-lg;
+}
+
+/* Sections */
+section {
+  padding: 6rem 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Smooth animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f7f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4844a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8663a;
+}
